@@ -2,16 +2,27 @@ package tudelft.ghappy;
 
 public class GHappy {
 
+    private static final char G = 'g';
+
     public boolean gHappy(String str) {
         assert str!=null;
-        for(int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == 'g') {
-                if (i >= 0 && str.charAt(i-1) == 'g') { continue; }
-                if (i+1 < str.length() && str.charAt(i+1) == 'g') { continue; }
-                return false;
+        final int length = str.length();
+
+        int i = 0;
+        while (i < length) {
+            if (str.charAt(i) == G) {
+                int j = i + 1;
+                while (j < length && str.charAt(j) == G) {
+                    ++j;
+                }
+                if (j == i + 1) {
+                    return false;
+                }
+                i = j;
+            } else {
+                ++i;
             }
         }
-
         return true;
 
     }
