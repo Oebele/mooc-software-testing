@@ -16,7 +16,7 @@ public class CaesarShiftCipherTest {
             "'a shift 26 should give a', 'a', 26, 'a'",
             "'a shift 27 should give b', 'a', 27, 'b'",
             "'! shift 1 should give invalid ', '!', 0, 'invalid'",
-            "'0 shift 1 should give invalid ', '0', 0, 'invalid'",
+            "'0 shift 10 should give invalid ', '10', 0, 'invalid'",
             "'attackatdawn shift 7 should give haahjrhakhdu ', 'attackatdawn', 7, 'haahjrhakhdu'",
     })
     public void testAlgorithm(String test_name, String message, int shift, String expectedResult) {

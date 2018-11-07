@@ -20,6 +20,7 @@ public class GHappyTest {
             "'string aga should be false ', 'aga', false",
             "'string gaa should be false ', 'gaa', false",
             "'string ggag should be false ', 'ggag', false",
+            "'string aggaa should be true ', 'aggaa', true",
             "'string ggggaag should be false ', 'ggggaag', false",
             "'string ggaggaaagga should be true ', 'ggaggaaagga', true",
 
